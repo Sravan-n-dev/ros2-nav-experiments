@@ -1,0 +1,18 @@
+# Experiment definition read by goal_runner.
+# IMPORTANT: coordinates below are starting values for the TurtleBot3 world.
+# Open RViz, check that each goal is in free space in your map, and adjust.
+world: turtlebot3_world
+timeout_s: 120
+initial_pose: {x: -2.0, y: -0.5, yaw: 0.0}
+
+scenarios:
+  - name: baseline_short
+    repetitions: 5
+    goals:
+      - {id: A, x: 0.5, y: -1.5}
+      - {id: B, x: 1.5, y: 0.5}
+  - name: baseline_long
+    repetitions: 5
+    goals:
+      - {id: C, x: 2.0, y: 1.5}
+      - {id: D, x: -2.0, y: 1.5}
